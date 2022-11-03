@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-//const logger = require('../helpers/logger');
+const logger = require('../helpers/logger');
 const SECRET_KEY = process.env.SECRET_KEY;
 
 module.exports = {
@@ -18,7 +18,7 @@ module.exports = {
             if (token) {
                 jwt.verify(token, SECRET_KEY, (err, decoded) => {
                     if (err) {
-                        //logger.warn('token_not_valid');
+                        logger.warn('token_not_valid');
                         return res.status(401).json('token_not_valid');
                     } else {
                         req.decoded = decoded;
