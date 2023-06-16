@@ -1,14 +1,14 @@
-# API-DOC kanpus
+# API-DOC Kanpus
 
 14/04/2022
 
-# absence
+# Absence
 
 ### PATCH /absence/9
 
-Ajouter des trainee absents à un événement
+Ajouter des stagiaires absents à un événement
 
-### Request :
+### Requête :
 
 ```json
 {
@@ -20,31 +20,28 @@ Ajouter des trainee absents à un événement
 
 ### GET /absence/7
 
-Voir toutes les absences d'un trainee
+Voir toutes les absences d'un stagiaire
 
-# login
+# Login
 
 ### GET /signin
 
-Retourne les informations de la structure pour la page login.
+Retourne les informations de la structure pour la page de connexion.
 
 ### POST /signin
 
-Connecter un user
+Connecter un utilisateur
 
-### Request :
+### Requête :
 
 ```json
 {
-
-"email": "former@gmail.com",
-"password": "kanpus"
-
+	"email": "former@gmail.com",
+	"password": "kanpus"
 }
-
 ```
 
-# settings
+# Settings
 
 ### GET /settings
 
@@ -54,7 +51,7 @@ Retourne toutes les informations de la structure.
 
 Modifie les informations de la structure.
 
-### Request :
+### Requête :
 
 ```json
 {
@@ -68,174 +65,169 @@ Modifie les informations de la structure.
   "course_start_hour_pm": "15:31:12",
   "course_end_hour_pm": "15:31:12"
 }
-
 ```
 
-# user
+# User
 
 ### GET /user/event_form
 
-Tous les users triés par group et par promo
+Tous les utilisateurs triés par groupe et par promotion
 
-# former
+# Former
 
 ### GET /user/former
 
-Retourne tous les former triés par is_permanent (titulaires ou Intervenants)
+Retourne tous les formateurs triés par statut (titulaires ou intervenants)
 
 ### GET /user/former/2
 
-Retourne les infos d'un former par id
+Retourne les informations d'un formateur par son ID
 
 ### POST /user/former
 
-Ajouter un former
+Ajouter un formateur
 
-### Request :
+### Requête :
 
 ```json
-	{
-			"firstname":"ludo",
-			"lastname":"cc",
-			"address":"3 rue de la paix 14800 deauville",
-			"phone_number":"+33569698794",
-			"email":"formef99r@gmail.com",
-			"image":"phil.jpg",
-			"new_password":"kanpus",
-			"confirm_new_password":"kanpus",
-			"is_permanent":true,
-			"color":"#458498"
-		}
-
+{
+	"firstname": "ludo",
+	"lastname": "cc",
+	"address": "3 rue de la paix 14800 deauville",
+	"phone_number": "+33569698794",
+	"email": "formef99r@gmail.com",
+	"image": "phil.jpg",
+	"new_password": "kanpus",
+	"confirm_new_password": "kanpus",
+	"is_permanent": true,
+	"color": "#458498"
+}
 ```
 
 ### PATCH /user/former/11
 
-Modifie un former par son id.
+Modifie un formateur par son ID.
 
-### Request :
+### Requête :
 
 ```json
-      {
-        "firstname": "Alains",
-        "lastname": "Deloins",
-        "address": "45 rue fernand michel 84000 AVIGNON",
-        "phone_number": "+33678956412",
-        "email": "a.del99oin@gmail.com",
-        "image": "<http://localhost:5000/avatar/thumbnail.png>",
-        "color": "#269987",
-        "is_permanent": true
-      }
-
+{
+	"firstname": "Alains",
+	"lastname": "Deloins",
+	"address": "45 rue fernand michel 84000 AVIGNON",
+	"phone_number": "+33678956412",
+	"email": "a.del99oin@gmail.com",
+	"image": "<http://localhost:5000/avatar/thumbnail.png>",
+	"color": "#269987",
+	"is_permanent": true
+}
 ```
 
 ### DELETE /user/former/11
 
-Supprime un former par son id.
+Supprime un formateur par son ID.
 
 # Trainee
 
 ### GET /user/trainee
 
-Tous les trainee triés par promo avec les trainee sans promo, pour la page élève
+Tous les stagiaires triés par promotion, y compris ceux sans promotion, pour la page des élèves
 
 ### GET /user/trainee/65
 
-Retourne les infos d'un trainee par id
+Retourne les informations d'un stagiaire par son ID
 
 ### POST /user/trainee
 
-Ajouter un trainee
+Ajouter un stagiaire
 
-### Request :
+### Requête :
 
 ```json
-	{
-			"firstname":"999",
-			"lastname":"imca",
-			"address":"3 rue de la paix 14800 deauville",
-			"phone_number":"+33569698794",
-			"email":"trainee999@gmail.com",
-			"image":"phil.jpg",
-			"new_password":"kanpus",
-			"confirm_new_password":"kanpus",
-			"promo_id":1
-}
+{
+	"firstname": "999",
+	"lastname": "imca",
+	"address": "3 rue de la paix 14800 de
 
+auville",
+	"phone_number": "+33569698794",
+	"email": "trainee999@gmail.com",
+	"image": "phil.jpg",
+	"new_password": "kanpus",
+	"confirm_new_password": "kanpus",
+	"promo_id": 1
+}
 ```
 
 ### PATCH /user/trainee/65
 
-Modifie un trainee par son id.
+Modifie un stagiaire par son ID.
 
-### Request :
+### Requête :
 
 ```json
-	{
-			"firstname":"romanros",
-			"lastname":"deldonos",
-			"address":"3 rue de la paix 14800 deauville",
-			"phone_number":"33569698794",
-			"email":"83ldgdo99rgt88k@pmail.com",
-			"image":"phil.jpg",
-			"promo_id":1
-	}
-
+{
+	"firstname": "romanros",
+	"lastname": "deldonos",
+	"address": "3 rue de la paix 14800 deauville",
+	"phone_number": "33569698794",
+	"email": "83ldgdo99rgt88k@pmail.com",
+	"image": "phil.jpg",
+	"promo_id": 1
+}
 ```
 
 ### DELETE /user/trainee/13
 
-Supprime un trainee par son id.
+Supprime un stagiaire par son ID.
 
 ### PATCH /user/password
 
-Modifie le mot de password du user connecté.
+Modifie le mot de passe de l'utilisateur connecté.
 
-### Request :
+### Requête :
 
 ```json
-        {
-            "old_password":"romain2",
-            "new_password":"romain3",
-            "repeat_password":"romain3"
-        }
-
+{
+	"old_password": "romain2",
+	"new_password": "romain3",
+	"repeat_password": "romain3"
+}
 ```
 
 ### PATCH /user/password/14
 
-Modifie le mot de password d'un user par son id.
+Modifie le mot de passe d'un utilisateur par son ID.
 
-### Request :
+### Requête :
 
 ```json
-        {
-            "old_password":"kanpus",
-            "new_password":"romain",
-            "repeat_password":"romain"
-        }
-
+{
+	"old_password": "kanpus",
+	"new_password": "romain",
+	"repeat_password": "romain"
+}
 ```
 
-# event
+# Event
 
 ### GET /event/organizer/2022-04-11
 
-Tous les events pour l'organizer de la date indiqué à plus 5 jours
+Tous les événements pour l'organisateur à partir de la date indiquée jusqu'à 5 jours plus tard
 
 ### GET /event/1
 
-Retourne un event par rapport à un id
+Retourne un événement par son ID
 
 ### GET /event/my_course/1
 
-Les events à partir de la date du jour pour un user (former ou trainee) , trier par date de début de l'event avec la pagination qui débute à 1 .
+Les événements à partir de la date du jour pour un utilisateur (formateur ou stagiaire), triés par date de début de l'événement avec une pagination commençant à 1.
 
 ### POST /event/check_date/null
 
-Retourne les place et les former disponibles pour les dates indiquées.
+Retourne les places et les formateurs disponibles pour les dates indiquées.
 
-### Request :
+### Requête :
 
 ```json
 {
@@ -243,121 +235,122 @@ Retourne les place et les former disponibles pour les dates indiquées.
 	"start_date": "2022-05-03 09:15:00",
 	"end_date": "2022-05-04 17:30:00"
 }
-
 ```
 
 ### POST /event
 
-Ajoute un nouveau event avec les users associer
+Ajoute un nouvel événement avec les utilisateurs associés
 
-### Request :
+### Requête :
 
 ```json
 {
-		"name":"yiyi",
-		"address":"",
-		"note":"",
-		"equipment":"",
-		"role":"",
-		"start_date":"2022-04-19 12:30:00",
-		"end_date":"2022-04-27 12:25:00",
-		"place_id":2,
-		"trainee":[2],
-		"former":[6]
+	"name": "yiyi",
+	"address": "",
+	"note": "",
+	"equipment": "",
+	"role": "",
+	"start_date": "2022-04-19 12:30:00",
+	"end_date": "2022-04-27 12:25:00",
+	"place_id": 2,
+	"trainee": [2],
+	"former": [6]
 }
 ```
 
 ### PATCH /event/16
 
-Modifie un event et les users associer par rapport à son id
+Modifie un événement et les utilisateurs associés par son ID
 
-### Request :
+### Requête :
 
 ```json
 {
-		"name":"font mark",
-		"address":"null",
-		"note":"txt",
-		"equipment":"txyt",
-		"role":"Perchamn",
-		"start_date":"2022-03-28 09:31:00+02",
-		"end_date":"2022-03-28 15:00:00+02",
-		"place_id":6,
-		"trainee":[1,2],
-		"former":[4,6]
+	"name": "font mark",
+	"address": "null",
+	"note": "txt",
+	"equipment": "txyt",
+	"role": "Perchamn",
+	"start_date": "2022-03-28 09:31:00+02",
+	"end_date": "2022-03-28 15:00:00+02",
+	"place_id": 6,
+	"trainee": [1, 2
+
+],
+	"former": [4, 6]
 }
 ```
 
 ### DELETE /event/26
 
-Supprimer un event par id
+Supprimer un événement par son ID
 
-# place
+# Place
 
 ### GET /place
 
-Tous les places trier par position
+Tous les lieux triés par position
 
 ### POST /place/
 
-Ajouter une place
+Ajouter un lieu
 
-### Request :
+### Requête :
 
 ```json
 {
-	"name":"studio 679",
-	"position":15
+	"name": "studio 679",
+	"position": 15
 }
 ```
 
 ### PATCH /place/10
 
-Modifier une place par rapport à son id
+Modifier un lieu par son ID
 
-### Request :
+### Requête :
 
 ```json
 {
-	"name":"Studio 665",
-	"position":20
+	"name": "Studio 665",
+	"position": 20
 }
 ```
 
 ### DELETE /place/12
 
-Supprimer une place par rapport à son id
+Supprimer un lieu par son ID
 
-# promo
+# Promo
 
 ### GET /promo
 
-Retourne toutes les promos.
+Retourne toutes les promotions
 
 ### POST /promo
 
-Ajouter une promo
+Ajouter une promotion
 
-### Request :
+### Requête :
 
 ```json
 {
-	"name":"zag"
+	"name": "zag"
 }
 ```
 
 ### PATCH /promo/5
 
-Modifier une promo par rapport à son id
+Modifier une promotion par son ID
 
-### Request :
+### Requête :
 
 ```json
 {
-	"name":"Stage été"
+	"name": "Stage été"
 }
 ```
 
 ### DELETE /promo/3
 
-Supprimer une promo par rapport à son id
+Supprimer une promotion par son ID
