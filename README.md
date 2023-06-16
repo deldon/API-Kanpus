@@ -1,61 +1,59 @@
 # Kanpus ERP
 
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+![Node.js](https://img.shields.io/badge/Node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20Web%20Tokens)
 
 <img src="./doc/img/header.png">
 
 ## **Détails du projet**
 
-Kampus ERP (Entreprise Ressource Planning), destiné au centre de formation.
+Kanpus ERP (Enterprise Resource Planning), destiné au centre de formation.
 
-L’application permet une foix connecter, l’agenda des évènements, et des lieux (salle de classe).
+L'application permet, une fois connecté, la gestion de l'agenda des événements et des lieux (salles de classe).
 
-Les élèves peuve consulter en lecture seule leur calendrier , tandis que les formateurs peuvent créer modifier et supprimer les évènements, les lieux, les promos, les absences.
+Les élèves peuvent consulter en lecture seule leur calendrier, tandis que les formateurs peuvent créer, modifier et supprimer les événements, les lieux, les promotions et les absences.
 
-Se repos contiens l’API REST de Kanpus
-
-
+Ce dépôt contient l'API REST de Kanpus.
 
 ## Technologies utilisées
 
 - Node.js
 - Express
-- PostgresSQL
+- PostgreSQL
 - JWT
-- B-crypy
-- Joy
-- Express File upload
+- Bcrypt
+- Joi
+- Express File Upload
 
 ## Documents
 
-[Voir la DOC API](./doc/ApiDoc.md)
+[Consulter la documentation de l'API](./doc/ApiDoc.md)
 
-[Voir Les roles et permition](./doc/permissions.md)
+[Consulter les rôles et les permissions](./doc/permissions.md)
 
 ## Base de données
 
 <img src="./doc/img/MCD-kanpus.png">
 
-## Instalation de l’api
+## Installation de l'API
 
-Cloner le repos github 
+Cloner le dépôt GitHub :
 
 ```markdown
 git clone git@github.com:deldon/API-Kanpus.git
 ```
 
-Installer des dépendance npm 
+Installer les dépendances npm :
 
 ```markdown
-npm i
+npm install
 ```
 
-Crée un dossier “logs” avec a l’interieur un fichier error.log a la racine du projet.
+Créer un dossier "logs" avec un fichier error.log à la racine du projet.
 
-Modifier le fichier .env
+Modifier le fichier .env :
 
 ```markdown
 PORT=5000
@@ -64,21 +62,21 @@ SECRET_KEY=aaaaa
 URL_SERVER=http://localhost:5000/
 ```
 
-Crée une bdd avec postgres sql
+Créer une base de données PostgreSQL :
 
 ```markdown
 sudo -i -u postgres psql
 CREATE DATABASE kanpus OWNER myuser;
 ```
 
-Déployer la bdd avec sqitch
+Déployer la base de données avec Sqitch :
 
 ```markdown
 sqitch init kanpus --engine pg --target db:pg:kanpus --top-dir migrations
 sqitch deploy
 ```
 
-**Démarer l’API**
+**Démarrer l'API**
 ```
 npm run dev
 ```
@@ -86,12 +84,10 @@ npm run dev
 
 ## Participants au projet
 
-****Romain Deldon****
+- Romain Deldon
+- Marc Smaniotto
 
-****Marc Smaniotto****
+Une application front-end a été développée avec React par :
 
-Une application front a etais developer avec react par :
-
-****Ludovic Lecoq****
-
-****Inès Lujian****
+- Ludovic Lecoq
+- Inès Lujian
